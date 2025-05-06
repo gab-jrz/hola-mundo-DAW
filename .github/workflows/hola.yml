@@ -1,0 +1,11 @@
+name: Ejecutar Hola Mundo
+
+on: [push]  # ← ESTA LÍNEA ES FUNDAMENTAL
+
+jobs:
+  hola:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Ejecutar script
+        run: node index.js
